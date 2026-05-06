@@ -4,7 +4,7 @@
 A study planner that allocates time based on subject importance using Fractional Knapsack algorithm.
 
 ## Features
-- Input number of subjects
+- Input number of subjects,subject names and importance
 - Assign priority to each subject
 - Optimized time allocation
 
