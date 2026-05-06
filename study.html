@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Study Planner</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            margin: 0;
+        }
+
+        .container {
+            width: 500px;
+            margin: 60px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            width: 95%;
+            padding: 10px;
+            margin: 6px 0 12px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 12px;
+            width: 100%;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #5a67d8;
+        }
+
+        .subject-box {
+            background: #f4f6f8;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Smart Study Planner</h1>
+
+    <label>No. of Subjects</label>
+    <input type="number" id="n">
+
+    <button onclick="createFields()">Add Subjects</button>
+
+    <form action="http://localhost:8080" method="get">
+        <div id="fields"></div>
+
+        <label>Total Available Time (minutes)</label>
+        <input name="W" required>
+
+        <button type="submit">Generate Schedule</button>
+    </form>
+</div>
+
+<script>
+function createFields() {
+    let n = document.getElementById("n").value;
+    let div = document.getElementById("fields");
+    div.innerHTML = "";
+
+    for (let i = 1; i <= n; i++) {
+        div.innerHTML += `
+        <div class="subject-box">
+            <input name="s${i}" placeholder="Subject Name" required>
+            <input name="t${i}" type="number" placeholder="Time (minutes)" required>
+            <input name="i${i}" type="number" placeholder="Importance" required>
+        </div>`;
+    }
+}
+</script>
+
+</body>
+</html>
