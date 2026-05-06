@@ -20,7 +20,7 @@ Fractional Knapsack (Greedy Method)
 2. Run StudyServer
 3. Open study.html
 
-##Preview
+## Preview
 <img width="635" height="448" alt="image" src="https://github.com/user-attachments/assets/45c166c4-e845-427f-b267-074010435128" />
 
 <img width="647" height="841" alt="image" src="https://github.com/user-attachments/assets/ead450b2-f5b0-447c-b2d8-6ce70d6d55d3" />
